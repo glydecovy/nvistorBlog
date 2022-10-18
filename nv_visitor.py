@@ -31,7 +31,6 @@ def sendMsg(telegram_token, msgText):
 
 if __name__ == '__main__':
 	telegram_token = sys.argv[1]
-#     sys.argv[1]
 	try:
 		visitor_xtree = getNVisitor()		
 		for node in visitor_xtree.findall('visitorcnt'):
