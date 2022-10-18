@@ -24,12 +24,12 @@ def getNowTime():
 
 def sendMsg(telegram_token, msgText):
 	bot 	= telegram.Bot(token = telegram_token)
-	cat_id 	= TELEGRAM_CHAT_ID	
+	cat_id 	= '5058812313'	
 	bot.sendMessage(chat_id = cat_id, text=msgText)	
 
 
 if __name__ == '__main__':
-	telegram_token = TELEGRAM_TOKEN
+	telegram_token = sys.argv[1]
 #     sys.argv[1]
 	try:
 		visitor_xtree = getNVisitor()		
