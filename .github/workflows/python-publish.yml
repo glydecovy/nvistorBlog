@@ -3,9 +3,9 @@
 
 name: Python package
 
-on:
-  schedule:
-  - cron: "59 * * * *"
+# on:
+#   schedule:
+#   - cron: "59 * * * *"
 
 jobs:
   run:
