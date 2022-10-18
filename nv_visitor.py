@@ -7,8 +7,7 @@ import telegram
 # from telegram import Bot
 from pytz import timezone
  
-KST = datetime.datetime.now(timezone('Asia/Seoul'))
- 
+KST = datetime.datetime.now(timezone('Asia/Seoul')) 
 	
 def getNVisitor():
 	naver_id = 'ahnsk3939'
