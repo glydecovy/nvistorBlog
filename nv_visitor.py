@@ -9,6 +9,7 @@ from pytz import timezone
  
 KST = datetime.datetime.now(timezone('Asia/Seoul'))
  
+	
 def getNVisitor():
 	naver_id = 'ahnsk3939'
 	headers = {'User-Agent': 'Mozilla/5.0'}	
