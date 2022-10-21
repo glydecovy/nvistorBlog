@@ -23,7 +23,19 @@ from pytz import timezone
 
 url = 'https://m.glyde.co.kr/ui/display/mainPage'
 
-wd = webdriver.Chrome('C:\chromedriver_win32\chromedriver.exe')
+# wd = webdriver.Chrome('C:\chromedriver_win32\chromedriver.exe')
+options = webdriver.ChromeOptions()
+options.add_argument("start-maximized")
+options.add_argument("lang=ko_KR")
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
+options.add_argument("--no-sandbox")
+
+# chrome driver
+wd = webdriver.Chrome('chromedriver', chrome_options=options)
+wd.implicitly_wait(3)    
+
 wd.get(url)
 time.sleep(5)
 html = wd.page_source
