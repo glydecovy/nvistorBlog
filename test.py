@@ -318,6 +318,6 @@ def sendMsg(telegram_token, msgText):
 if __name__ == '__main__':
 	telegram_token = sys.argv[1]
 	try:
-    	sendMsg(telegram_token, df)														
+    		sendMsg(telegram_token, df)														
 	except Exception as e:
 		print("e:",e)    
