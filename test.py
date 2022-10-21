@@ -6,6 +6,15 @@ import pandas as pd             # pandas 라이브러리
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
+
+import os,sys
+import requests
+import xml.etree.ElementTree as ET
+import datetime
+import telegram 
+from pytz import timezone
+
+
 # python3 에서 sys 안됨
 # import sys
 # reload(sys)
@@ -281,3 +290,22 @@ ax.table(cellText=df.values,colLabels=df.columns,rowLabels=df.index,loc="center"
 
 # plt.show()
 plt.savefig('20221021.png')
+
+
+def getToDay():
+	return KST.strftime("%Y%m%d")
+def getNowTime():
+	return KST.strftime("%Y년%m월%d일 %H시%M분")
+
+def sendMsg(telegram_token, msgText):
+	bot 	= telegram.Bot(token = telegram_token)
+	cat_id 	= '5058812313'	
+	bot.sendMessage(chat_id = cat_id, text=msgText)	
+    
+    
+if __name__ == '__main__':
+	telegram_token = sys.argv[1]
+	try:
+    	sendMsg(telegram_token, df)														
+	except Exception as e:
+		print("e:",e)    
