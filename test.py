@@ -321,7 +321,8 @@ if __name__ == '__main__':
 	print(chk_df)
 	print(type(chk_df.to_string()))
 	print(chk_df.to_string())
+	sDf = chk_df.to_string()
 	try:
-    		sendMsg(telegram_token, chk_df)														
+    		sendMsg(telegram_token, sDf)														
 	except Exception as e:
 		print("e:",e)    
