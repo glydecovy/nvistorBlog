@@ -281,7 +281,7 @@ summary.append([title, len(result)])
 
 matplotlib.rcParams['font.family'] ='Malgun Gothic'
 matplotlib.rcParams['axes.unicode_minus'] =False
-
+matplotlib.font_manager._rebuild()
 
 df = pd.DataFrame(summary, columns=['corner', 'image_count'])
 df.set_index('corner',drop=True,inplace=True)
