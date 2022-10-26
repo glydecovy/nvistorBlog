@@ -31,4 +31,4 @@ jobs:
         unzip tmp.zip && rm tmp.zip        
     - name: Test with pytest
       run: |
-        python monitorImg.py  ${{ secrets.CHAT_TOKEN }}
+        python monitorImg.py  ${{ secrets.CHAT_TOKEN }} ${{ secrets.CHAT_ID }}
