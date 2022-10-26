@@ -292,9 +292,9 @@ if __name__ == '__main__':
 
 	################################################[table 꾸미기]#############################################
 
-	matplotlib.rcParams['font.family'] ='Malgun Gothic'
-	matplotlib.rcParams['axes.unicode_minus'] =False
-	matplotlib.font_manager._rebuild()
+# 	matplotlib.rcParams['font.family'] ='Malgun Gothic'
+# 	matplotlib.rcParams['axes.unicode_minus'] =False
+# 	matplotlib.font_manager._rebuild()
 
 	df = pd.DataFrame(summary, columns=['corner', 'image_count'])
 	df.set_index('corner',drop=True,inplace=True)
@@ -314,7 +314,7 @@ if __name__ == '__main__':
 	ax.table(cellText=df.values,colLabels=df.columns,rowLabels=df.index,loc="center")
 
 	# plt.show()
-	plt.savefig('20221021.png')  
+# 	plt.savefig('20221021.png')  
 	chk_df = df
 	print(chk_df)
 	print(type(chk_df.to_string()))
