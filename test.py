@@ -267,10 +267,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 
 	summary.append([title, len(result)]) 
 
