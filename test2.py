@@ -70,10 +70,10 @@ if __name__ == '__main__':
 	# tmp_data = set(data)
 	# data = list(tmp_data)
 
-# 	# 중복제거2
-# 	for value in data:
-# 	    if value not in result:
-# 		result.append(value)
+	# 중복제거2
+	for value in data:
+	    if value not in result:
+		result.append(value)
 	result        
 	# print(len(result))
 	summary.append([title, len(result)]) 
