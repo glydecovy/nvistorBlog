@@ -21,13 +21,14 @@ def getNowTime():
 
 def sendMsg(telegram_token, msgText):
 	bot 	= telegram.Bot(token = telegram_token)
-	cat_id 	= '-1001187429712'	
+# 	cat_id 	= '-1001187429712'	
 	bot.sendMessage(chat_id = cat_id, text=msgText)	
     
     
 if __name__ == '__main__':
 	telegram_token = sys.argv[1]
-
+	cat_id 	= sys.argv[2]
+	
 	# python3 에서 sys 안됨
 	# import sys
 	# reload(sys)
