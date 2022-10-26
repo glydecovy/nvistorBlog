@@ -57,10 +57,10 @@ def getDfWeb():
 	# tmp_data = set(data)
 	# data = list(tmp_data)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	result        
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -79,10 +79,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -100,10 +100,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -120,10 +120,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -140,10 +140,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -162,10 +162,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
@@ -186,10 +186,10 @@ def getDfWeb():
 	# tmp_data = [s for s in data if ".webp" in s]  
 	# data = tmp_data
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 
 	summary.append([title, len(result)]) 
 	###########################################################################################################
@@ -209,10 +209,10 @@ def getDfWeb():
 	# tmp_data = [s for s in data if ".webp" in s]  
 	# data = tmp_data
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 
 	summary.append([title, len(result)]) 
 
@@ -229,10 +229,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 
 	summary.append([title, len(result)]) 
 	###########################################################################################################
@@ -248,10 +248,10 @@ def getDfWeb():
 	    data.append([src]) 
 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:
-		result.append(value)
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:
+# 		result.append(value)
 
 	summary.append([title, len(result)]) 
 	###########################################################################################################
