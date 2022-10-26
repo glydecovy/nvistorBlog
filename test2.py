@@ -43,7 +43,7 @@ if __name__ == '__main__':
 	options.add_argument('headless')
 	options.add_argument('window-size=1920x1080')
 	options.add_argument("disable-gpu")
-	options.add_argument("--no-sandbox")
+	options.add_argument("--no-sandbox")	
 
 	# chrome driver
 	wd = webdriver.Chrome('chromedriver', options=options)
@@ -72,8 +72,7 @@ if __name__ == '__main__':
 
 	# 중복제거2
 	for value in data:
-	    if value not in result:
-		result.append(value)
+	    if value not in result:result.append(value)
 	# print(len(result))
 	summary.append([title, len(result)]) 
 
