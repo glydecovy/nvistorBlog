@@ -74,7 +74,6 @@ if __name__ == '__main__':
 	for value in data:
 	    if value not in result:
 		result.append(value)
-	result        
 	# print(len(result))
 	summary.append([title, len(result)]) 
 
