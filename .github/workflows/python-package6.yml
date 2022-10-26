@@ -32,15 +32,3 @@ jobs:
     - name: Test with pytest
       run: |
         python test.py  ${{ secrets.TELEGRAM_TOKEN }}
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Tra
