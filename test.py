@@ -33,7 +33,7 @@ def getDfWeb():
 	options.add_argument("--no-sandbox")
 
 	# chrome driver
-	wd = webdriver.Chrome('chromedriver', chrome_options=options)
+	wd = webdriver.Chrome('chromedriver', options=options)
 	wd.implicitly_wait(3)    
 
 	wd.get(url)
