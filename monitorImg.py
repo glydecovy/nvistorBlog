@@ -56,6 +56,8 @@ if __name__ == '__main__':
 	bs = BeautifulSoup(html, 'html.parser')
 
 	summary =[]
+# 	error_flag : false 가 정상 = 모든 이미지가 3개 이상인 경우
+	error_flag = False 
 	###########################################################################################################
 	# main 상단 banner
 	table = bs.find('div', { 'class': 'home-group1' }) 
@@ -76,6 +78,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 	# print(len(result))
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 
 	###########################################################################################################
 	# 재구매율 상품
@@ -97,6 +100,7 @@ if __name__ == '__main__':
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 
 	###########################################################################################################
 	# home-group19 : 극찬후기
@@ -117,6 +121,7 @@ if __name__ == '__main__':
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# 추천 상품
 	table = bs.find('div', { 'class': 'home-group13-2' })   
@@ -136,6 +141,7 @@ if __name__ == '__main__':
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# home-group2
 	table = bs.find('div', { 'class': 'home-group2' })  
@@ -155,7 +161,7 @@ if __name__ == '__main__':
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
-
+	if len(result) < 3 : error_flag = True
 
 	###########################################################################################################
 	# home-group18 : 신상품 : 상단 대표 이미지 포함
@@ -176,6 +182,7 @@ if __name__ == '__main__':
 	# print(result        )
 	# print(len(result))
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# home-group18 :이번 주 BEST3 상품이에요
 	table = bs.find('div', { 'class': 'home-group12' })  
@@ -198,6 +205,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# home-group13 :극찬후기 상품
 	table = bs.find('div', { 'class': 'home-group13' })  
@@ -220,6 +228,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 
 	###########################################################################################################
 	# home-group14:글라이득템, 코너 상단 big image 포함
@@ -239,6 +248,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# home-group7:고객님께 추천드려요
 	table = bs.find('div', { 'class': 'home-group7' })  
@@ -257,6 +267,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 	###########################################################################################################
 	# home-group11:냉동실 쟁여템 추천
 	table = bs.find('div', { 'class': 'home-group11' })  
@@ -275,6 +286,7 @@ if __name__ == '__main__':
 	    if value not in result:result.append(value)
 
 	summary.append([title, len(result)]) 
+	if len(result) < 3 : error_flag = True
 
 	################################################[최종 LIST]################################################
 	# print(summary)
@@ -308,8 +320,10 @@ if __name__ == '__main__':
 	print(chk_df)
 	print(type(chk_df.to_string()))
 	print(chk_df.to_string())
-	sDf = chk_df.to_string()
+	sDf = chk_df.to_string()	
+# 	error_flag == True 인 경우만 메세지 전송
 	try:
-    		sendMsg(telegram_token, sDf)														
+		if error_flag == True:
+			sendMsg(telegram_token, sDf)														
 	except Exception as e:
 		print("e:",e)   
