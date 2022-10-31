@@ -25,7 +25,7 @@ jobs:
         pip install matplotlib
         pip install bs4
         pip install pandas
-        pip install Soup
+        pip install gazpacho
         pip install tabulate
     - name: Download chromedriver
       run: |
