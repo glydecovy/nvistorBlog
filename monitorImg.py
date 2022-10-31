@@ -143,25 +143,25 @@ if __name__ == '__main__':
 	summary.append([title, len(result)]) 
 	if len(result) < 3 : error_flag = True
 	###########################################################################################################
-	# home-group2
-	table = bs.find('div', { 'class': 'home-group2' })  
-	tmp_title = table.find('div', { 'class': 'group-head-copy' })
-	title = tmp_title.text
+# 	# home-group2
+# 	table = bs.find('div', { 'class': 'home-group2' })  
+# 	tmp_title = table.find('div', { 'class': 'group-head-copy' })
+# 	title = tmp_title.text
 
-	data = []                            # 데이터를 저장할 리스트 생성
-	result = []
-	for img in table.find_all("img"):      
-	    src = img["src"]
-	    data.append([src]) 
-	#     print(src)
+# 	data = []                            # 데이터를 저장할 리스트 생성
+# 	result = []
+# 	for img in table.find_all("img"):      
+# 	    src = img["src"]
+# 	    data.append([src]) 
+# 	#     print(src)
 
-	# 중복제거2
-	for value in data:
-	    if value not in result:result.append(value)
-	# print(result        )
-	# print(len(result))
-	summary.append([title, len(result)]) 
-	if len(result) < 3 : error_flag = True
+# 	# 중복제거2
+# 	for value in data:
+# 	    if value not in result:result.append(value)
+# 	# print(result        )
+# 	# print(len(result))
+# 	summary.append([title, len(result)]) 
+# 	if len(result) < 3 : error_flag = True
 
 	###########################################################################################################
 	# home-group18 : 신상품 : 상단 대표 이미지 포함
