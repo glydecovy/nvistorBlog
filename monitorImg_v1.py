@@ -13,6 +13,10 @@ import xml.etree.ElementTree as ET
 import datetime
 import telegram 
 from pytz import timezone
+from gazpacho import Soup
+import http.client
+from tabulate import tabulate
+tabulate.WIDE_CHARS_MODE = True
 
 def getToDay():
 	return KST.strftime("%Y%m%d")
