@@ -27,8 +27,15 @@ def sendMsg(telegram_token, msgText):
 	bot 	= telegram.Bot(token = telegram_token)
 # 	cat_id 	= '-1001187429712'	
 	bot.sendMessage(chat_id = cat_id, text=msgText)	
-    
-    
+
+def sendingForm(df):
+    message = ''
+    for idx in df.index:
+        message = message + f"{df.loc[idx, 'corner'][:30]:<40}" \
+            + f" {df.loc[idx, 'image_count']:>4}" \
+            + "\n"
+    return message
+
 if __name__ == '__main__':	
 	telegram_token = sys.argv[1]
 	cat_id 	= sys.argv[2]
