@@ -65,8 +65,10 @@ if __name__ == '__main__':
 
 	for index, value in enumerate(divs):		
 		#index 12, 글라이드스토리 제외
-	        if index == 12 : continue
-		tmp = value.attrs        
+	        if index == 12:
+			continue
+		else:
+			tmp = value.attrs
         ###########################################################################################################
 		grpNm = tmp.get('class')        
 		table = bs.find('div', { 'class': grpNm }) 
