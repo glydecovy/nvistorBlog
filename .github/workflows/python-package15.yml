@@ -26,6 +26,7 @@ jobs:
         pip install bs4
         pip install pandas
         pip install Soup
+        pip install tabulate
     - name: Download chromedriver
       run: |
         wget -q -O tmp.zip https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
