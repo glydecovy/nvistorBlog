@@ -26,7 +26,7 @@ def getNowTime():
 def sendMsg(telegram_token, msgText):
 	bot 	= telegram.Bot(token = telegram_token)
 # 	cat_id 	= '-1001187429712'	
-	bot.sendMessage(chat_id = cat_id, text=msgText)	
+	bot.sendMessage(chat_id = cat_id, text=msgText, parse_mode="HTML")	
 
 def sendingForm(df):
     message = ''
@@ -180,6 +180,6 @@ if __name__ == '__main__':
 	t= tabulate(df, headers='keys', tablefmt='plain', showindex=False, numalign='right' )
 	print(t)
 	try:
-		sendMsg(telegram_token, t)
+		sendMsg(telegram_token,"<pre>"+t+"</pre>")
 	except Exception as e:
 		print("e:",e)   
